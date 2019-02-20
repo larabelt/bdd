@@ -1,0 +1,43 @@
+default:
+    extensions:
+        Extensions\DotEnvExtension: ~
+        SensioLabs\Behat\PageObjectExtension:
+            namespaces:
+                page: [Pages\QAEChallengeForm]
+        Behat\MinkExtension:
+            base_url: http://2.0.larabelt.test
+            javascript_session: selenium2
+            browser_name: 'chrome'
+    suites:
+        default:
+            contexts:
+                - Contexts\CheckFoods
+                - Contexts\CheckFoods
+                - Contexts\ConfirmEmail
+                - Contexts\UploadFile
+                - Contexts\FormHelper
+                - Contexts\ValidateEmail
+                - Behat\MinkExtension\Context\MinkContext
+headless:
+    extensions:
+        Cjm\Behat\StepThroughExtension: ~
+        SensioLabs\Behat\PageObjectExtension:
+            namespaces:
+                page: [Pages\QAEChallengeForm]
+        Behat\MinkExtension:
+            base_url: http://qae-challenge.test
+            javascript_session: selenium2
+            browser_name: 'chrome'
+            selenium2: {capabilities: {browserName: chrome, browser: chrome, version: '70', chrome: {switches: ['--no-sandbox', '--headless']}}}
+
+node:
+    extensions:
+        Cjm\Behat\StepThroughExtension: ~
+        SensioLabs\Behat\PageObjectExtension:
+            namespaces:
+                page: [Pages\QAEChallengeForm]
+        Behat\MinkExtension:
+            base_url: http://2.0.larabelt.test
+            javascript_session: selenium2
+            browser_name: 'chrome'
+            selenium2: {wd_host: "http://192.168.10.10:4444/wd/hub"}
