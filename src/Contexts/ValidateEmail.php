@@ -2,7 +2,7 @@
 
 namespace Contexts;
 
-use Pages\QAEChallengeForm;
+use Pages\LoginPage;
 
 /**
  * Defines application features from the specific context.
@@ -16,7 +16,7 @@ class ValidateEmail extends BaseContext
      * You can also pass arbitrary arguments to the
      * context constructor through behat.yml.
      */
-    public function __construct(QAEChallengeForm $page)
+    public function __construct(LoginPage $page)
     {
         $this->setPage($page);
     }

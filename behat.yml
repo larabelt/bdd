@@ -11,7 +11,7 @@ default:
     suites:
         default:
             contexts:
-                - Contexts\CheckFoods
+                - Contexts\LoginContext
                 - Contexts\CheckFoods
                 - Contexts\ConfirmEmail
                 - Contexts\UploadFile

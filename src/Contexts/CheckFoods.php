@@ -2,7 +2,7 @@
 
 namespace Contexts;
 
-use Pages\QAEChallengeForm;
+use Pages\LoginPage;
 
 /**
  * Defines application features from the specific context.
@@ -15,9 +15,9 @@ class CheckFoods extends BaseContext
      * Every scenario gets its own context instance.
      * You can also pass arbitrary arguments to the
      * context constructor through behat.yml.
-     * @param QAEChallengeForm $page
+     * @param LoginPage $page
      */
-    public function __construct(QAEChallengeForm $page)
+    public function __construct(LoginPage $page)
     {
         $this->setPage($page);
     }
